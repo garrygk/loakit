@@ -1,0 +1,8 @@
+{
+  "name": "Loakit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "b082e47f"
+}

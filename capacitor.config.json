@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Loakit",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
