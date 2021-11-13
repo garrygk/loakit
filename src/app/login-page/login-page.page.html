@@ -9,25 +9,47 @@
 
   <ion-split-pane contentId="main">
     <!--  the side menu  -->
-    <ion-menu style="--background:#00b0d7;width:900px;" contentId="main">
-
-      <ion-text style="color: white; margin-top: 225px; margin-left: 55px;">
-        <p style="font-size: 40px;font-weight: bold;">Welcome Back <br> From Your <br> Break!</p>
-        <p style="font-size: 20px;margin-top: -30px;">Time to continue learning <br> & earning with Sparkie.</p>
+    <ion-menu style="--background: #00b0d7; width: 900px" contentId="main">
+      <ion-text style="color: white; margin-top: 225px; margin-left: 55px">
+        <p style="font-size: 40px; font-weight: bold">
+          Welcome Back <br />
+          From Your <br />
+          Break!
+        </p>
+        <p style="font-size: 20px; margin-top: -30px">
+          Time to continue learning <br />
+          & earning with Sparkie.
+        </p>
       </ion-text>
-
     </ion-menu>
-  
+
     <!-- the main content -->
     <ion-router-outlet id="main">
-
       <ion-text>
-        <h1 style="color: black; font-size: 35px;margin-left: 320px;margin-top: 120px;">Let's get started now</h1>
-        <p style="color: blue;font-size: 18px;font-weight: lighter;margin-top: -12px;margin-left: 390px;"> <span style="color: black;">Or</span> create an account</p>
+        <h1
+          style="
+            color: black;
+            font-size: 35px;
+            margin-left: 320px;
+            margin-top: 120px;
+          "
+        >
+          Let's get started now
+        </h1>
+        <p
+          style="
+            color: blue;
+            font-size: 18px;
+            font-weight: lighter;
+            margin-top: -12px;
+            margin-left: 390px;
+          "
+        >
+          <span style="color: black">Or</span> create an account
+        </p>
       </ion-text>
 
       <ion-row ion-radio-group>
-
         <ion-col>
           <ion-item>
             <ion-label>Learner</ion-label>
@@ -36,11 +58,10 @@
         </ion-col>
         <ion-col>
           <ion-item>
-           <ion-label>Teacher</ion-label>
+            <ion-label>Teacher</ion-label>
             <ion-radio value="femme"></ion-radio>
           </ion-item>
         </ion-col>
-        
       </ion-row>
 
       <!-- <ion-content padding>
@@ -65,28 +86,62 @@
       </ion-buttons> -->
 
       <ion-content padding>
-        <form style="margin-left: 350px;margin-top: 40px;" #form="ngForm" (ngSubmit)="login(form)" method="post">
-          <ion-item style="width: 350px;">
+        <form
+          style="margin-left: 350px; margin-top: 40px"
+          #form="ngForm"
+          [formGroup]="loginForm"
+          (ngSubmit)="onSubmit()"
+        >
+          <ion-item style="width: 350px">
             <ion-label position="floating">Username</ion-label>
-            <ion-input ngModel type="email" name="email"></ion-input>
+            <ion-input
+              ngModel
+              type="email"
+              name="email"
+              formControlName="teacherId"
+            ></ion-input>
           </ion-item>
-          <br>
-          <ion-item style="width: 350px;">
+          <br />
+          <ion-item style="width: 350px">
             <ion-label position="floating">Learner Code</ion-label>
-            <ion-input ngModel type="password" name="password"></ion-input>
+            <ion-input
+              ngModel
+              type="password"
+              name="password"
+              formControlName="learnerCode"
+            ></ion-input>
           </ion-item>
 
-          <ion-buttons tab="tab3" slot="primary" style="margin-top: 30px;margin-left: 100px;">
-            <ion-button href="/personal-details" style="background:#FF6E05;color: white;width:130px;border-radius:15px;margin-right:40px;">
-                LOGIN
+          <ion-buttons
+            tab="tab3"
+            slot="primary"
+            style="margin-top: 30px; margin-left: 100px"
+          >
+            <ion-button
+              style="
+                background: #ff6e05;
+                color: white;
+                width: 130px;
+                border-radius: 15px;
+                margin-right: 40px;
+              "
+              type="submit"
+            >
+              LOGIN
             </ion-button>
           </ion-buttons>
-          <p style="color: blue;font-size: 15px;font-weight: lighter;margin-left:105px;">Forgot password?</p>
-
+          <p
+            style="
+              color: blue;
+              font-size: 15px;
+              font-weight: lighter;
+              margin-left: 105px;
+            "
+          >
+            Forgot password?
+          </p>
         </form>
       </ion-content>
-
     </ion-router-outlet>
   </ion-split-pane>
-
 </ion-content>
