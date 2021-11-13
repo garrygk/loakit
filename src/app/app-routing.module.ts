@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'sections',
     loadChildren: () => import('./sections/sections.module').then( m => m.SectionsPageModule)
+  },
+  {
+    path: 'mathematics',
+    loadChildren: () => import('./mathematics/mathematics.module').then( m => m.MathematicsPageModule)
   }
 ];
 @NgModule({
