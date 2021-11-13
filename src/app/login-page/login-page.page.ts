@@ -36,7 +36,7 @@ export class LoginPagePage implements OnInit {
         teacherId: this.loginForm.controls.teacherId.value,
         learnerCode: this.loginForm.controls.learnerCode.value,
       });
-      localStorage.setItem('learner': learner);
+      // localStorage.setItem('learner': learner);c
     }
   }
 }
