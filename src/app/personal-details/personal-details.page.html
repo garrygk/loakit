@@ -1,0 +1,42 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>PersonalDetails</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="ion-padding">
+  <!-- <ion-button [routerLink]="['/detail']">Go to detail</ion-button> -->
+
+  <ion-split-pane contentId="main">
+    <!--  the side menu  -->
+    <ion-menu style="--background:#00b0d7;width:900px;" contentId="main">
+      <ion-text style="color: white; margin-top: 225px; margin-left: 55px;">
+        <p style="font-size: 40px;font-weight: bold;">Tell Us What<br> You Like</p>
+        <p style="font-size: 20px;margin-top: -30px;">and tell us how you like <br> learning</p>
+      </ion-text>
+    </ion-menu>
+  
+    <!-- the main content -->
+    <ion-router-outlet id="main">
+
+      <ion-text>
+        <h1 style="color: black; font-size: 35px;margin-left: 320px;margin-top: 40px;">Personal Details</h1>
+        <p style="font-size: 18px;font-weight: lighter;margin-top: -12px;margin-left: 345px;">Start your learning today</p>
+      </ion-text>
+
+
+      <ion-content padding>
+        <ion-button href="/smart-contract" style="background:#FF6E05;color: white;width:130px;border-radius:15px;margin-right:40px;">
+          NEXT
+        </ion-button>
+      </ion-content>
+
+      <ion-buttons tab="tab3" slot="primary" style="margin-top: 30px;margin-left: 100px;">
+      </ion-buttons>
+
+      
+
+    </ion-router-outlet>
+  </ion-split-pane>
+
+</ion-content>

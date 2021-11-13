@@ -9,6 +9,18 @@ const routes: Routes = [
   {
     path: 'login-page',
     loadChildren: () => import('./login-page/login-page.module').then( m => m.LoginPagePageModule)
+  },
+  {
+    path: 'personal-details',
+    loadChildren: () => import('./personal-details/personal-details.module').then( m => m.PersonalDetailsPageModule)
+  },
+  {
+    path: 'smart-contract',
+    loadChildren: () => import('./smart-contract/smart-contract.module').then( m => m.SmartContractPageModule)
+  },
+  {
+    path: 'sections',
+    loadChildren: () => import('./sections/sections.module').then( m => m.SectionsPageModule)
   }
 ];
 @NgModule({

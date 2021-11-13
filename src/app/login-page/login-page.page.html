@@ -11,16 +11,10 @@
     <!--  the side menu  -->
     <ion-menu style="--background:#00b0d7;width:900px;" contentId="main">
 
-      <ion-text style="color: white; margin-top: 235px; margin-left: 55px;">
+      <ion-text style="color: white; margin-top: 225px; margin-left: 55px;">
         <p style="font-size: 40px;font-weight: bold;">Welcome Back <br> From Your <br> Break!</p>
         <p style="font-size: 20px;margin-top: -30px;">Time to continue learning <br> & earning with Sparkie.</p>
       </ion-text>
-
-      <!-- <ion-content padding>
-        <div>
-         <h4 class="gray">This text is in the center of the screen</h4>
-        </div>
-       </ion-content> -->
 
     </ion-menu>
   
@@ -28,22 +22,13 @@
     <ion-router-outlet id="main">
 
       <ion-text>
-        <h1 style="color: black; font-size: 35px;margin-left: 290px;">Let's get started now</h1>
-        <p style="color: blue;font-size: 18px;font-weight: lighter;margin-top: -12px;"> <span style="color: black;">Or</span> create an account</p>
+        <h1 style="color: black; font-size: 35px;margin-left: 320px;margin-top: 120px;">Let's get started now</h1>
+        <p style="color: blue;font-size: 18px;font-weight: lighter;margin-top: -12px;margin-left: 390px;"> <span style="color: black;">Or</span> create an account</p>
       </ion-text>
 
       <ion-row ion-radio-group>
-        <ion-item>
-          <ion-label>Learner</ion-label>
-          <ion-radio slot="start" color="success" value="learner"></ion-radio>
-        </ion-item>
 
-        <ion-item>
-          <ion-label>Teacher</ion-label>
-          <ion-radio slot="start" color="danger" value="teacher"></ion-radio>
-        </ion-item>
-
-        <!-- <ion-col>
+        <ion-col>
           <ion-item>
             <ion-label>Learner</ion-label>
             <ion-radio value="homme"></ion-radio>
@@ -54,7 +39,7 @@
            <ion-label>Teacher</ion-label>
             <ion-radio value="femme"></ion-radio>
           </ion-item>
-        </ion-col> -->
+        </ion-col>
         
       </ion-row>
 
@@ -80,45 +65,26 @@
       </ion-buttons> -->
 
       <ion-content padding>
-        <form #form="ngForm" (ngSubmit)="login(form)" method="post">
+        <form style="margin-left: 350px;margin-top: 40px;" #form="ngForm" (ngSubmit)="login(form)" method="post">
           <ion-item style="width: 350px;">
-            <ion-label position="floating">Email</ion-label>
+            <ion-label position="floating">Username</ion-label>
             <ion-input ngModel type="email" name="email"></ion-input>
           </ion-item>
-        
+          <br>
           <ion-item style="width: 350px;">
-            <ion-label position="floating">Password</ion-label>
+            <ion-label position="floating">Learner Code</ion-label>
             <ion-input ngModel type="password" name="password"></ion-input>
           </ion-item>
 
-          <ion-buttons tab="tab3" slot="primary">
-            <ion-button style="background:#FF6E05;color: white;width:130px;border-radius:15px;margin-right:40px;">
+          <ion-buttons tab="tab3" slot="primary" style="margin-top: 30px;margin-left: 100px;">
+            <ion-button href="/personal-details" style="background:#FF6E05;color: white;width:130px;border-radius:15px;margin-right:40px;">
                 LOGIN
             </ion-button>
           </ion-buttons>
+          <p style="color: blue;font-size: 15px;font-weight: lighter;margin-left:105px;">Forgot password?</p>
 
         </form>
       </ion-content>
-
-      <!-- <ion-item>
-        <ion-label stacked>Username</ion-label>
-        <ion-input [(ngModel)]="username"></ion-input>
-      </ion-item>
-    
-      <ion-item>
-        <ion-label stacked>Password</ion-label>
-        <ion-input type="password" [(ngModel)]="password"></ion-input>
-      </ion-item>
-    
-      <div text-center margin-top>
-        <button ion-button margin-right (click)="signUp()">
-          SIGN UP
-        </button>
-    
-        <button ion-button color="secondary" (click)="signIn()">
-          SIGN IN
-        </button>
-      </div> -->
 
     </ion-router-outlet>
   </ion-split-pane>
