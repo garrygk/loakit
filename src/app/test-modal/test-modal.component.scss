@@ -1,3 +1,47 @@
 ion-item {
-    --padding-start: 0;
+  --padding-start: 0;
+}
+
+ion-text {
+  h1 {
+    color: #363636;
+    font-weight: bold;
+    padding-left: 120px;
+  }
+
+  p {
+    padding-left: 120px;
+  }
+}
+
+.radio-toolbar input[type="radio"] {
+  display: none;
+}
+
+.radio-toolbar label {
+  display: inline-block;
+  background-color: transparent;
+  padding: 4px 11px;
+  font-family: Arial;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  position: static;
+  box-sizing: border-box;
+  width: 90%;
+}
+
+.radio-border {
+    padding-top: 6px;
+    padding-bottom: 2px;
+    align-items: center;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+  background-color: transparent;
+  border: 1px solid #ff6e05;
+  border-radius: 10px;
+  color: #ff6e05;
+  box-sizing: border-box;
 }

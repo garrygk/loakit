@@ -29,6 +29,10 @@ const routes: Routes = [
   {
     path: 'natural-science',
     loadChildren: () => import('./natural-science/natural-science.module').then( m => m.NaturalSciencePageModule)
+  },
+  {
+    path: 'test-page',
+    loadChildren: () => import('./test-page/test-page.module').then( m => m.TestPagePageModule)
   }
 ];
 @NgModule({
