@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'mathematics',
     loadChildren: () => import('./mathematics/mathematics.module').then( m => m.MathematicsPageModule)
+  },
+  {
+    path: 'natural-science',
+    loadChildren: () => import('./natural-science/natural-science.module').then( m => m.NaturalSciencePageModule)
   }
 ];
 @NgModule({

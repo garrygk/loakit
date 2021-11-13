@@ -1,0 +1,21 @@
+<ionic-header>
+  <ion-toolbar>
+    <title>Test 1</title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">
+        <ion-icon name="close-outline" style="width: 40px; height: 40px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ionic-header>
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label position="floating">Amount</ion-label>
+    <ion-input [FormControl]="balanceInput" type="number"></ion-input>
+  </ion-item>
+  <ion-button [disabled]="balanceInput.invalid" expand="block" (click)="onDeposit()" class="ion-margin-top">
+    Deposit
+  </ion-button>
+
+</ion-content>
