@@ -12,6 +12,7 @@ export class TestPagePage implements OnInit {
   constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {
+    this.nextLesson();
   }
 
   async nextLesson(){
