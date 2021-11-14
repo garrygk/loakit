@@ -9,7 +9,7 @@
 
   <ion-split-pane contentId="main">
     <!--  the side menu  -->
-    <ion-menu style="--background:#00b0d7;width:900px;" contentId="main">
+    <ion-menu style="--background: #fff url('../../assets/images/random_background.png') no-repeat center center / cover;" contentId="main">
 
       <ion-text style="color: white; margin-top: 225px; margin-left: 55px;">
         <p style="font-size: 40px;font-weight: bold;">Welcome Back <br> From Your <br> Break!</p>
@@ -23,49 +23,30 @@
 
       <ion-text>
         <h1 style="color: black; font-size: 35px;margin-left: 320px;margin-top: 120px;">Let's get started now</h1>
-        <p style="color: blue;font-size: 18px;font-weight: lighter;margin-top: -12px;margin-left: 390px;"> <span style="color: black;">Or</span> create an account</p>
+        <p style="color: #1DA1F2;font-size: 18px;font-weight: lighter;margin-top: -15px;margin-left: 390px;"> <span style="color: black;">Or</span> create an account</p>
       </ion-text>
 
-      <ion-row ion-radio-group>
-
-        <ion-col>
-          <ion-item>
-            <ion-label>Learner</ion-label>
-            <ion-radio value="homme"></ion-radio>
-          </ion-item>
-        </ion-col>
-        <ion-col>
-          <ion-item>
-           <ion-label>Teacher</ion-label>
-            <ion-radio value="femme"></ion-radio>
-          </ion-item>
-        </ion-col>
-        
-      </ion-row>
-
-      <!-- <ion-content padding>
-
-        <ion-item class="roundedInput" style="width: 450px;">
-          <ion-label position="floating">Username:</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-
-        <ion-item class="roundedInput" style="width: 450px;">
-          <ion-label position="floating">Learner Code:</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-
-      </ion-content>
-
-
-      <ion-buttons tab="tab3" slot="primary">
-        <ion-button style="background:#FF6E05;color: white;width:130px;border-radius:15px;margin-right:40px;">
-            LOGIN
-        </ion-button>
-      </ion-buttons> -->
+      <ion-radio-group>
+        <ion-list lines="none" style="margin-left: 350px;">
+          <ion-row>
+            <ion-col>
+                <ion-item style="width: 120px;">
+                  <ion-label>Learner</ion-label>
+                  <ion-radio color="tertiary"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item style="width: 120px;">
+                  <ion-label>Teacher</ion-label>
+                  <ion-radio color="tertiary"></ion-radio>
+                </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-list>
+      </ion-radio-group>
 
       <ion-content padding>
-        <form style="margin-left: 350px;margin-top: 40px;" #form="ngForm" (ngSubmit)="login(form)" method="post">
+        <form style="margin-left: 350px;margin-top: 20px;" #form="ngForm" (ngSubmit)="login(form)" method="post">
           <ion-item style="width: 350px;">
             <ion-label position="floating">Username</ion-label>
             <ion-input ngModel type="email" name="email"></ion-input>
@@ -79,9 +60,9 @@
           <ion-buttons tab="tab3" slot="primary" style="margin-top: 30px;margin-left: 100px;">
             <ion-button href="/personal-details" style="background:#FF6E05;color: white;width:130px;border-radius:15px;margin-right:40px;">
                 LOGIN
-            </ion-button>
+            </ion-button> 
           </ion-buttons>
-          <p style="color: blue;font-size: 15px;font-weight: lighter;margin-left:105px;">Forgot password?</p>
+          <p style="color: #1DA1F2;font-size: 15px;font-weight: lighter;margin-left:105px;">Forgot password?</p>
 
         </form>
       </ion-content>

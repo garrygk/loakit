@@ -9,7 +9,7 @@
 
   <ion-split-pane contentId="main">
     <!--  the side menu  -->
-    <ion-menu style="--background:#00b0d7;width:900px;" contentId="main">
+    <ion-menu style="--background: #fff url('../../assets/images/random_background.png') no-repeat center center / cover;" contentId="main">
       <ion-text style="color: white; margin-top: 225px; margin-left: 55px;">
         <p style="font-size: 40px;font-weight: bold;">Keep Every<br> Promise You <br> Make.</p>
         <p style="font-size: 20px;margin-top: -30px;">and only make promises <br> you can keep. </p>
@@ -18,24 +18,66 @@
   
     <!-- the main content -->
     <ion-router-outlet id="main">
-
-      <ion-text>
-        <h1 style="color: black; font-size: 35px;margin-left: 320px;margin-top: 40px;">Smart Contract</h1>
-        <p style="font-size: 18px;font-weight: lighter;margin-top: -12px;margin-left: 345px;">Start your learning today</p>
-      </ion-text>
-
-
       <ion-content padding>
-        <ion-button href="/sections" style="background:#FF6E05;color: white;width:130px;border-radius:15px;margin-right:40px;">
-          GET STARTED
-        </ion-button>
+        <ion-text>
+          <h1 style="color: black; font-size: 35px;margin-left: 370px;margin-top: 40px;">Smart Contract</h1>
+          <p style="font-size: 18px;font-weight: lighter;margin-top: -12px;margin-left: 390px;">Start your learning today</p>
+        </ion-text>
+
+        <div style="margin-top: 30px" class="content">
+          <p>I promise to get <span style="color: #1DA1F2;"><u>50%</u></span> in Mathematics.</p>
+          <p>I will help others by <span style="color: #1DA1F2;"><u>picking up litter</u></span> in my community.</p>
+          <p>I will participate in <span style="color: #1DA1F2;"><u>soccer</u></span> for my afterschool activity.</p>
+          <p>I will try my best to <span style="color: #1DA1F2;"><u>do my chores</u></span> at home.</p>
+          <ion-item lines="none">
+            <ion-label>I pinky promise</ion-label>
+            <ion-checkbox></ion-checkbox>
+          </ion-item>
+        </div>
+
+        <div style="margin-top: 260px;margin-left: 430px;margin-bottom: -260px;">
+          <ion-text>
+            <p style="font-size: 18px;font-weight: bold">Choose a reward: </p> <br>
+          </ion-text>
+        </div>
+        <div style="height: 100%; display: flex; align-items: center; justify-content: center;margin-bottom: -200px;">
+          <ion-grid style="margin-left:50px">
+            <ion-row>
+              <ion-col col-6 no-padding>
+                <ion-card style="height: 250px;width: 250px;" button (click)="toggleFirstColor()" [color]="primary" [ngStyle]="{'background-color': buttonColor}">
+                  <div style="display: flex; align-items: center; justify-content: center; margin-top: 30%;"><img src="../../assets/images/soccer_kit.png"/></div>
+                  <div style="align-items: center; text-align: center"><ion-card-header>
+                    <ion-card-title style="align-content: center;">Soccer Kit</ion-card-title>
+                  </ion-card-header></div>
+                </ion-card>
+              </ion-col>
+              <ion-col col-6 no-padding>
+                <ion-card style="height: 250px;width: 250px;" button (click)="toggleSecondColor()" [color]="primary" [ngStyle]="{'background-color': buttonColor2}">
+                  <div style="display: flex; align-items: center; justify-content: center; margin-top: 30%;"><img src="../../assets/images/art.png"/></div>
+                  <div style="align-items: center; text-align: center"><ion-card-header>
+                    <ion-card-title>Art Gallery</ion-card-title>
+                  </ion-card-header></div>
+                </ion-card>
+              </ion-col>
+              <ion-col col-6 no-padding>
+                <ion-card style="height: 250px;width: 250px;" button (click)="toggleThirdColor()" [color]="primary" [ngStyle]="{'background-color': buttonColor3}">
+                  <div style="display: flex; align-items: center; justify-content: center; margin-top: 30%;"><img src="../../assets/images/zoo.png" /></div>
+                  <div style="align-items: center; text-align: center"><ion-card-header>
+                    <ion-card-title>The Zoo</ion-card-title>
+                  </ion-card-header></div>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+
+        <ion-buttons style="margin-left: 70px;">
+          <ion-button href="/sections" style="background:#FF6E05;color: white;width:130px;border-radius:15px;margin-right:40px;">
+            GET STARTED
+          </ion-button>
+        </ion-buttons>
       </ion-content>
-
-      <ion-buttons tab="tab3" slot="primary" style="margin-top: 30px;margin-left: 100px;">
-      </ion-buttons>
-
-      
-
+    
     </ion-router-outlet>
   </ion-split-pane>
 
