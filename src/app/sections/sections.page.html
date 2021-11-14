@@ -1,19 +1,18 @@
 <ion-header>
-  <ion-toolbar style="--background:#00b0d7">
-
-    <ion-buttons slot="primary" style="color: white;">
+  <ion-toolbar style="--background: #00b0d7">
+    <ion-buttons slot="primary" style="color: white">
       <ion-button>
         <ion-icon name="notifications"></ion-icon>
       </ion-button>
     </ion-buttons>
 
-    <ion-buttons slot="primary" style="color: white;">
+    <ion-buttons slot="primary" style="color: white">
       <ion-button>
         <ion-icon name="person"></ion-icon>
       </ion-button>
     </ion-buttons>
 
-    <ion-buttons slot="primary"  style="color: white;">
+    <ion-buttons slot="primary" style="color: white">
       <ion-button>
         THABO
         <ion-icon name="caret-down"></ion-icon>
@@ -21,100 +20,252 @@
     </ion-buttons>
 
     <ion-buttons tab="tab3" slot="primary">
-      <ion-button style="color: white;margin-right:40px;">
+      <ion-button style="color: white; margin-right: 40px">
         <ion-icon name="ellipsis-vertical"></ion-icon>
       </ion-button>
     </ion-buttons>
-
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-
   <ion-text>
-    <h1 style="color: black; font-size: 35px;margin-left: 320px;">Select a subject</h1>
+    <h1 style="color: black; font-size: 35px; margin-left: 320px">
+      Select a subject
+    </h1>
   </ion-text>
   <!-- <ion-button [routerLink]="['/detail']">Go to detail</ion-button> -->
 
-  <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
-  <ion-grid>
-    <ion-row>
-      <ion-col col-6 no-padding>
-        <ion-card style="height: 250px;width: 250px;" button (click)="toggleFirstColor()" [color]="primary" [ngStyle]="{'background-color': buttonColor}">
-          <img src="../../assets/images/language.png"/>
-          <ion-card-header>
-            <ion-card-title style="align-content: center;">English</ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6 no-padding>
-        <ion-card style="height: 250px;width: 250px;" button (click)="toggleSecondColor()" [color]="primary" [ngStyle]="{'background-color': buttonColor2}">
-          <img src="../../assets/images/zulu.png" />
-          <ion-card-header>
-            <ion-card-title>Zulu</ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6 no-padding>
-        <ion-card style="height: 250px;width: 250px;" button (click)="toggleThirdColor()" [color]="primary" [ngStyle]="{'background-color': buttonColor3}">
-          <img src="../../assets/images/maths.png" />
-          <ion-card-header>
-            <ion-card-title>Mathematics</ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6 no-padding>
-        <ion-card style="height: 250px;width: 250px;" button (click)="toggleFourthColor()" [color]="primary" [ngStyle]="{'background-color': buttonColor4}">
-          <img src="../../assets/images/life_science.png" />
-          <ion-card-header>
-            <ion-card-title>Life Sciences</ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
+  <div
+    style="
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    "
+  >
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 no-padding>
+          <ion-card
+            style="height: 250px; width: 250px"
+            button
+            (click)="toggleFirstColor()"
+            [color]="primary"
+            [ngStyle]="{'background-color': buttonColor}"
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30%;
+              "
+            >
+              <img src="../../assets/images/language.png" />
+            </div>
+            <div style="align-items: center; text-align: center">
+              <ion-card-header>
+                <ion-card-title style="align-content: center"
+                  >English</ion-card-title
+                >
+              </ion-card-header>
+            </div>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6 no-padding>
+          <ion-card
+            style="height: 250px; width: 250px"
+            button
+            (click)="toggleSecondColor()"
+            [color]="primary"
+            [ngStyle]="{'background-color': buttonColor2}"
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30%;
+              "
+            >
+              <img src="../../assets/images/zulu.png" />
+            </div>
+            <div style="align-items: center; text-align: center">
+              <ion-card-header>
+                <ion-card-title>Zulu</ion-card-title>
+              </ion-card-header>
+            </div>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6 no-padding>
+          <ion-card
+            style="height: 250px; width: 250px"
+            button
+            (click)="toggleThirdColor()"
+            [color]="primary"
+            [ngStyle]="{'background-color': buttonColor3}"
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30%;
+              "
+            >
+              <img src="../../assets/images/maths.png" />
+            </div>
+            <div style="align-items: center; text-align: center">
+              <ion-card-header>
+                <ion-card-title>Mathematics</ion-card-title>
+              </ion-card-header>
+            </div>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6 no-padding>
+          <ion-card
+            style="height: 250px; width: 250px"
+            button
+            (click)="toggleFourthColor()"
+            [color]="primary"
+            [ngStyle]="{'background-color': buttonColor4}"
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30%;
+              "
+            >
+              <img src="../../assets/images/life_science.png" />
+            </div>
+            <div style="align-items: center; text-align: center">
+              <ion-card-header>
+                <ion-card-title>Life Sciences</ion-card-title>
+              </ion-card-header>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
 
-    <ion-row>
-      <ion-col col-6 no-padding>
-        <ion-card style="height: 250px;width: 250px;" button (click)="toggleFifthColor()" [color]="primary" [ngStyle]="{'background-color': buttonColor5}">
-          <img src="../../assets/images/natural_science.png" />
-          <ion-card-header>
-            <ion-card-title>Natural Sciences</ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6 no-padding>
-        <ion-card style="height: 250px;width: 250px;" button (click)="toggleSixthColor()" [color]="primary" [ngStyle]="{'background-color': buttonColor6}">
-          <img src="../../assets/images/technology.png" />
-          <ion-card-header>
-            <ion-card-title>Technology</ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6 no-padding>
-        <ion-card style="height: 250px;width: 250px;" button (click)="toggleSeventhColor()" [color]="primary" [ngStyle]="{'background-color': buttonColor7}">
-          <img src="../../assets/images/social_science.png" />
-          <ion-card-header>
-            <ion-card-title>Social Sciences</ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6 no-padding>
-        <ion-card style="height: 250px;width: 250px;" button (click)="toggleEighthColor()" [color]="primary" [ngStyle]="{'background-color': buttonColor8}">
-          <img src="../../assets/images/life_skills.png" />
-          <ion-card-header>
-            <ion-card-title>Life Skills</ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-  </ion-grid>
+      <ion-row>
+        <ion-col col-6 no-padding>
+          <ion-card
+            style="height: 250px; width: 250px"
+            button
+            (click)="toggleFifthColor()"
+            [color]="primary"
+            [ngStyle]="{'background-color': buttonColor5}"
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30%;
+              "
+            >
+              <img src="../../assets/images/natural_science.png" />
+            </div>
+            <div style="align-items: center; text-align: center">
+              <ion-card-header>
+                <ion-card-title>Natural Sciences</ion-card-title>
+              </ion-card-header>
+            </div>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6 no-padding>
+          <ion-card
+            style="height: 250px; width: 250px"
+            button
+            (click)="toggleSixthColor()"
+            [color]="primary"
+            [ngStyle]="{'background-color': buttonColor6}"
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30%;
+              "
+            >
+              <img src="../../assets/images/technology.png" />
+            </div>
+            <div style="align-items: center; text-align: center">
+              <ion-card-header>
+                <ion-card-title>Technology</ion-card-title>
+              </ion-card-header>
+            </div>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6 no-padding>
+          <ion-card
+            style="height: 250px; width: 250px"
+            button
+            (click)="toggleSeventhColor()"
+            [color]="primary"
+            [ngStyle]="{'background-color': buttonColor7}"
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30%;
+              "
+            >
+              <img src="../../assets/images/social_science.png" />
+            </div>
+            <div style="align-items: center; text-align: center">
+              <ion-card-header>
+                <ion-card-title>Social Sciences</ion-card-title>
+              </ion-card-header>
+            </div>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6 no-padding>
+          <ion-card
+            style="height: 250px; width: 250px"
+            button
+            (click)="toggleEighthColor()"
+            [color]="primary"
+            [ngStyle]="{'background-color': buttonColor8}"
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30%;
+              "
+            >
+              <img src="../../assets/images/life_skills.png" />
+            </div>
+            <div style="align-items: center; text-align: center">
+              <ion-card-header>
+                <ion-card-title>Life Skills</ion-card-title>
+              </ion-card-header>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 
   <ion-content padding>
-    <ion-button href="/natural-science" style="background:#FF6E05;color: white;width:130px;border-radius:15px;margin-right:40px;">
+    <ion-button
+      href="/natural-science"
+      style="
+        background: #ff6e05;
+        color: white;
+        width: 130px;
+        border-radius: 15px;
+        margin-right: 40px;
+      "
+    >
       GET STARTED
     </ion-button>
   </ion-content>
-
 </ion-content>
