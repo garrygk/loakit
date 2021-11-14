@@ -1,25 +1,22 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title>Test Your Knowledge</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="dismissModal()">
-        <ion-icon
-          name="close-outline"
-          style="width: 40px; height: 40px"
-        ></ion-icon>
+        <ion-icon name="close-outline" style="width: 40px; height: 40px"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
   <ion-text>
-    <h1>Question 1</h1>
+    <h1 style="font-weight: bolder;font-size: 40px;">Question 1</h1>
     <p>How many faces does a square pyramid have?</p>
   </ion-text>
 
   <div class="radio-toolbar">
     <div class="radio-border">
-      <input type="radio" id="A" name="radioFruit" value="A" checked />
+      <input type="radio" id="A" name="radioFruit" value="A" />
       <label for="A">A - Six Squares</label>
     </div>
 
